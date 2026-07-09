@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verde Cloud Portal Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--
+      VERDE CLOUD PORTAL DASHBOARD
+      This is a beginner-friendly real-time frontend project.
+      HTML is used for page structure.
+      CSS is used for design, spacing, layout, colors, and responsiveness.
+    -->
+
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-logo">V</div>
+        <div>
+          <h1>Verde Cloud Portal</h1>
+          <p>Internal self-service dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#activity">Activity</a>
+        <a href="#support">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboard" class="hero-section">
+        <div class="hero-content">
+          <p class="eyebrow">Welcome back, Afreen</p>
+          <h2>Manage cloud requests from one place</h2>
+          <p>
+            Track VM provisioning, Kubernetes cluster requests, pending approvals,
+            and recent platform activity using this mini internal portal.
+          </p>
+        </div>
+
+        <div class="hero-status-card">
+          <span class="status-dot"></span>
+          <div>
+            <h3>Platform Status</h3>
+            <p>All core services are operational</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-grid" aria-label="Request summary cards">
+        <article class="dashboard-card vm-card">
+          <div class="card-icon">VM</div>
+          <div class="card-content">
+            <h3>VM Requests</h3>
+            <p class="card-number">18</p>
+            <p class="card-description">
+              New virtual machine provisioning requests waiting for validation.
+            </p>
+          </div>
+          <button class="card-button">View VM Requests</button>
+        </article>
+
+        <article class="dashboard-card k8s-card">
+          <div class="card-icon">K8s</div>
+          <div class="card-content">
+            <h3>Kubernetes Requests</h3>
+            <p class="card-number">7</p>
+            <p class="card-description">
+              Cluster requests submitted for namespace and supervisor review.
+            </p>
+          </div>
+          <button class="card-button">View K8s Requests</button>
+        </article>
+
+        <article class="dashboard-card approval-card">
+          <div class="card-icon">OK</div>
+          <div class="card-content">
+            <h3>Pending Approvals</h3>
+            <p class="card-number">12</p>
+            <p class="card-description">
+              Requests waiting for application owner or governance approval.
+            </p>
+          </div>
+          <button class="card-button">Review Approvals</button>
+        </article>
+      </section>
+
+      <section id="activity" class="content-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Recent Activity</p>
+            <h2>Latest platform updates</h2>
+          </div>
+          <button class="secondary-button">Export</button>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Request ID</th>
+                <th>Type</th>
+                <th>Owner</th>
+                <th>Status</th>
+                <th>Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>REQ-1042</td>
+                <td>VM Provisioning</td>
+                <td>Platform Team</td>
+                <td><span class="badge success">Completed</span></td>
+                <td>Today, 09:30 AM</td>
+              </tr>
+              <tr>
+                <td>REQ-1041</td>
+                <td>Kubernetes Cluster</td>
+                <td>Retail Apps</td>
+                <td><span class="badge warning">Pending</span></td>
+                <td>Today, 08:45 AM</td>
+              </tr>
+              <tr>
+                <td>REQ-1039</td>
+                <td>Approval</td>
+                <td>Security Governance</td>
+                <td><span class="badge info">In Review</span></td>
+                <td>Yesterday, 05:10 PM</td>
+              </tr>
+              <tr>
+                <td>REQ-1038</td>
+                <td>VM Decommission</td>
+                <td>Infrastructure</td>
+                <td><span class="badge danger">Failed</span></td>
+                <td>Yesterday, 03:25 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="support" class="content-section support-section">
+        <div class="support-info">
+          <p class="eyebrow">Need Help?</p>
+          <h2>Contact platform support</h2>
+          <p>
+            Use this form to raise a question about provisioning failures,
+            approvals, access, API errors, or dashboard issues.
+          </p>
+        </div>
+
+        <form class="support-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Enter your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="name@company.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="issue-type">Issue Type</label>
+            <select id="issue-type">
+              <option>VM Request Issue</option>
+              <option>Kubernetes Request Issue</option>
+              <option>Approval Issue</option>
+              <option>Dashboard Bug</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Describe the issue clearly"></textarea>
+          </div>
+
+          <button type="submit" class="primary-button">Submit Support Request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Verde Cloud Portal Dashboard. Practice frontend project.</p>
+    </footer>
+  </body>
+</html>
